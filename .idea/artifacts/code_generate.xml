@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="code_generate">
+    <output-path>$PROJECT_DIR$/out/artifacts/code_generate</output-path>
+    <root id="archive" name="code_generate.jar">
+      <element id="module-output" name="SerialDeviceController" />
+      <element id="library" level="project" name="Maven: org.bidib.jbidib.org.qbang.rxtx:rxtxcomm:2.2" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
