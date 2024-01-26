@@ -10,11 +10,19 @@
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.bidib.jbidib.org.qbang.rxtx/rxtxcomm -->
-        <dependency>
+<!--        此版本不是推薦版本-->
+<!--            <dependency>
             <groupId>org.bidib.jbidib.org.qbang.rxtx</groupId>
             <artifactId>rxtxcomm</artifactId>
             <version>2.2</version>
-        </dependency>
+        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.rxtx/rxtx -->
+<!--        <dependency>
+            <groupId>org.rxtx</groupId>
+            <artifactId>rxtx</artifactId>
+            <version>2.1.7</version>
+        </dependency>-->
 
 
 
