@@ -29,26 +29,45 @@ public class MainFrame extends JFrame {
 
 	// 数据显示区
 	private JTextArea mDataView = new JTextArea();
+
+	//数据显示区可以翻滚
 	private JScrollPane mScrollDataView = new JScrollPane(mDataView);
 
 	// 串口设置面板
 	private JPanel mSerialPortPanel = new JPanel();
+
+	//串口下拉框左边显示串口文本
 	private JLabel mSerialPortLabel = new JLabel("串口");
+
+	//波特率下拉框左边显示波特率文本
 	private JLabel mBaudrateLabel = new JLabel("波特率");
-	private JComboBox mCommChoice = new JComboBox();	//串口波特率选择下拉框
+
+	//串口选择下拉框
+	private JComboBox mCommChoice = new JComboBox();
+
+	//波特率选择下拉框
 	private JComboBox mBaudrateChoice = new JComboBox();
+
+	//按键组，ASCIIChoice和HexChoice 按钮放入
 	private ButtonGroup mDataChoice = new ButtonGroup();
 	private JRadioButton mDataASCIIChoice = new JRadioButton("ASCII", true);
 	private JRadioButton mDataHexChoice = new JRadioButton("Hex");
 
 	// 操作面板
 	private JPanel mOperatePanel = new JPanel();
+
+	//todo 操作面板中显示的数据待发送，后期记得线程安全考虑
 	private JTextArea mDataInput = new JTextArea();
-	private JButton mSerialPortOperate = new JButton("打开串口");//打开关闭串口按钮
-	private JButton mSendData = new JButton("发送数据");//发送数据按钮
+
+	//打开和关闭串口按钮上面的字可以改变
+	private JButton mSerialPortOperate = new JButton("打开串口");
+
+	//发送数据按钮
+	private JButton mSendData = new JButton("发送数据");
 
 	// 串口列表
 	private List<String> mCommList = null;
+
 	// 串口对象
 	private SerialPort mSerialport;
 
