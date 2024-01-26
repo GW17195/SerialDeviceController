@@ -35,7 +35,7 @@ public class MainFrame extends JFrame {
 	private JPanel mSerialPortPanel = new JPanel();
 	private JLabel mSerialPortLabel = new JLabel("串口");
 	private JLabel mBaudrateLabel = new JLabel("波特率");
-	private JComboBox mCommChoice = new JComboBox();
+	private JComboBox mCommChoice = new JComboBox();	//串口波特率选择下拉框
 	private JComboBox mBaudrateChoice = new JComboBox();
 	private ButtonGroup mDataChoice = new ButtonGroup();
 	private JRadioButton mDataASCIIChoice = new JRadioButton("ASCII", true);
@@ -44,8 +44,8 @@ public class MainFrame extends JFrame {
 	// 操作面板
 	private JPanel mOperatePanel = new JPanel();
 	private JTextArea mDataInput = new JTextArea();
-	private JButton mSerialPortOperate = new JButton("打开串口");
-	private JButton mSendData = new JButton("发送数据");
+	private JButton mSerialPortOperate = new JButton("打开串口");//打开关闭串口按钮
+	private JButton mSendData = new JButton("发送数据");//发送数据按钮
 
 	// 串口列表
 	private List<String> mCommList = null;
