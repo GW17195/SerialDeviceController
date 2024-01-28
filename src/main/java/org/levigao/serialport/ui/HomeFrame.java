@@ -5,6 +5,7 @@ import org.levigao.serialport.data.UIConfig;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
 
 public class HomeFrame extends JFrame {
     ///////
@@ -52,6 +53,14 @@ public class HomeFrame extends JFrame {
     private  JLabel mMaxThroughputRate = new JLabel("最大吞吐量");
 
     private  JTextField mMaxThroughputRateTextField = new JTextField();
+
+    private JButton mMaxThroughputRateUnitButton = new JButton("ml");
+
+    private  JLabel mThroughputRatePerTurn = new JLabel("每转吐出量");
+
+    private  JTextField mThroughputRatePerTurnTextField = new JTextField();
+
+    private  JLabel mThroughputRatePerTurnUnit = new JLabel("ml/rev");
 
     private JPanel mHomePanel = new JPanel();
 
@@ -245,7 +254,7 @@ public class HomeFrame extends JFrame {
         mLiquidViscosityUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*34+5 ,
                 30+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*3+5,
                 UIConfig.CHINESE_CHARACTER_WIDTH);
-        //mLiquidViscosityUnit.setFont(UIConfig.TEXT_FONT);
+        mLiquidViscosityUnit.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         //mLiquidViscosityUnit.setBackground(Color.RED);
         mLiquidViscosityUnit.setOpaque(true);
         mHomePanel.add(mLiquidViscosityUnit);
@@ -274,7 +283,7 @@ public class HomeFrame extends JFrame {
         mLiquidTemperatureUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*34+5 ,
                 30+UIConfig.CHINESE_CHARACTER_WIDTH*9, UIConfig.CHINESE_CHARACTER_WIDTH*3+5,
                 UIConfig.CHINESE_CHARACTER_WIDTH);
-        mLiquidTemperatureUnit.setFont(UIConfig.TEXT_FONT);
+        mLiquidTemperatureUnit.setFont( new Font("微软雅黑", Font.PLAIN, 18));
         //mLiquidViscosityUnit.setBackground(Color.RED);
         mLiquidTemperatureUnit.setOpaque(true);
         mHomePanel.add(mLiquidTemperatureUnit);
@@ -293,7 +302,44 @@ public class HomeFrame extends JFrame {
                 25+UIConfig.CHINESE_CHARACTER_WIDTH*15, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
         mMaxThroughputRateTextField.setFont(UIConfig.TEXT_FONT);
+        //mMaxThroughputRateTextField.setEditable(false);
         mHomePanel.add(mMaxThroughputRateTextField);
+
+
+        mMaxThroughputRateUnitButton.setFocusable(false);
+        //mMaxThroughputRateUnitButton.setText("g");
+        mMaxThroughputRateUnitButton.setFont( new Font("微软雅黑", Font.PLAIN, 18));
+        mMaxThroughputRateUnitButton.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*34+1,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*15,
+                57, 27);
+        mHomePanel.add(mMaxThroughputRateUnitButton);
+        //第七行第二个控件
+
+        mThroughputRatePerTurn.setForeground(Color.BLACK);
+        mThroughputRatePerTurn.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*18, UIConfig.CHINESE_CHARACTER_WIDTH*5,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mThroughputRatePerTurn.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosity.setBackground(Color.RED);
+        mThroughputRatePerTurn.setOpaque(true);
+        mHomePanel.add(mThroughputRatePerTurn);
+
+
+        mThroughputRatePerTurnTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*24,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*18, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mThroughputRatePerTurnTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mThroughputRatePerTurnTextField);
+
+
+        mThroughputRatePerTurnUnit.setForeground(Color.BLACK);
+        mThroughputRatePerTurnUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*34+5 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*18, UIConfig.CHINESE_CHARACTER_WIDTH*3+5,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mThroughputRatePerTurnUnit.setFont(new Font("微软雅黑", Font.PLAIN, 15));
+        //mLiquidViscosityUnit.setBackground(Color.RED);
+        mThroughputRatePerTurnUnit.setOpaque(true);
+        mHomePanel.add(mThroughputRatePerTurnUnit);
 
     }
 
