@@ -74,6 +74,8 @@ public class HomeFrame extends JFrame {
 
     private  JTextField mPumpSpeedTextField = new JTextField();
 
+    private JButton mStartTestButton = new JButton("测试开始");
+
     private JPanel mHomePanel = new DrawLineJPanel();
 
     // Create the JDatePicker
@@ -398,6 +400,13 @@ public class HomeFrame extends JFrame {
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
         mPumpSpeedTextField.setFont(UIConfig.TEXT_FONT);
         mHomePanel.add(mPumpSpeedTextField);
+
+        //第一行第四列
+
+        mStartTestButton.setFocusable(false);
+        mStartTestButton.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*62, 25, 125, 50);
+        mStartTestButton.setFont(new Font("微软雅黑", Font.BOLD, 22));
+        mHomePanel.add(mStartTestButton);
     }
 
     /**
