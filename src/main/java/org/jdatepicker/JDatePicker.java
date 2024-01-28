@@ -129,6 +129,7 @@ public class JDatePicker extends JComponent implements DatePicker {
         //Create and Add Components
         //Add and Configure TextField
         formattedTextField = new JFormattedTextField(new DateComponentFormatter());
+        formattedTextField.setFont(new Font("微软雅黑", Font.BOLD, 18));
         DateModel<?> model = datePanel.getModel();
         setTextFieldValue(formattedTextField, model.getYear(), model.getMonth(), model.getDay(), model.isSelected());
         formattedTextField.setEditable(false);
@@ -138,7 +139,7 @@ public class JDatePicker extends JComponent implements DatePicker {
 
         //Add and Configure Button
         button = new JButton();
-        button.setFocusable(true);
+        button.setFocusable(false);
         Icon icon = ComponentIconDefaults.getInstance().getPopupButtonIcon();
         button.setIcon(icon);
         if (icon == null) {
