@@ -43,6 +43,15 @@ public class HomeFrame extends JFrame {
 
     private  JLabel mLiquidViscosityUnit = new JLabel("cP(Mpa.s)");
 
+    private  JLabel mLiquidTemperature = new JLabel("液温");
+
+    private  JTextField mLiquidTemperatureTextField = new JTextField();
+
+    private  JLabel mLiquidTemperatureUnit = new JLabel("℃");
+
+    private  JLabel mMaxThroughputRate = new JLabel("最大吞吐量");
+
+    private  JTextField mMaxThroughputRateTextField = new JTextField();
 
     private JPanel mHomePanel = new JPanel();
 
@@ -192,7 +201,7 @@ public class HomeFrame extends JFrame {
         mHomePanel.add(mLiquidName);
 
 
-        mLiquidNameTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+        mLiquidNameTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*24,
                 25, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
         mLiquidNameTextField.setFont(UIConfig.TEXT_FONT);
@@ -208,7 +217,7 @@ public class HomeFrame extends JFrame {
         mLiquidRate.setOpaque(true);
         mHomePanel.add(mLiquidRate);
 
-        mLiquidRateTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+        mLiquidRateTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*24,
                 25+UIConfig.CHINESE_CHARACTER_WIDTH*3, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
         mLiquidRateTextField.setFont(UIConfig.TEXT_FONT);
@@ -224,18 +233,16 @@ public class HomeFrame extends JFrame {
         mHomePanel.add(mLiquidViscosity);
 
 
-        mLiquidViscosityTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+        mLiquidViscosityTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*24,
                 25+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
-
-
         mLiquidViscosityTextField.setFont(UIConfig.TEXT_FONT);
         mHomePanel.add(mLiquidViscosityTextField);
 
 
 
         mLiquidViscosityUnit.setForeground(Color.BLACK);
-        mLiquidViscosityUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*33+5 ,
+        mLiquidViscosityUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*34+5 ,
                 30+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*3+5,
                 UIConfig.CHINESE_CHARACTER_WIDTH);
         //mLiquidViscosityUnit.setFont(UIConfig.TEXT_FONT);
@@ -244,6 +251,49 @@ public class HomeFrame extends JFrame {
         mHomePanel.add(mLiquidViscosityUnit);
 
 
+        //第四行第二个控件
+        mLiquidTemperature.setForeground(Color.BLACK);
+        mLiquidTemperature.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*9, UIConfig.CHINESE_CHARACTER_WIDTH*4,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mLiquidTemperature.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosity.setBackground(Color.RED);
+        mLiquidTemperature.setOpaque(true);
+        mHomePanel.add(mLiquidTemperature);
+
+
+        mLiquidTemperatureTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*24,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*9, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mLiquidTemperatureTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidTemperatureTextField);
+
+
+
+        mLiquidTemperatureUnit.setForeground(Color.BLACK);
+        mLiquidTemperatureUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*34+5 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*9, UIConfig.CHINESE_CHARACTER_WIDTH*3+5,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mLiquidTemperatureUnit.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosityUnit.setBackground(Color.RED);
+        mLiquidTemperatureUnit.setOpaque(true);
+        mHomePanel.add(mLiquidTemperatureUnit);
+
+        //第六行第二个控件
+        mMaxThroughputRate.setForeground(Color.BLACK);
+        mMaxThroughputRate.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*15, UIConfig.CHINESE_CHARACTER_WIDTH*5,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mMaxThroughputRate.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosity.setBackground(Color.RED);
+        mMaxThroughputRate.setOpaque(true);
+        mHomePanel.add(mMaxThroughputRate);
+
+        mMaxThroughputRateTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*24,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*15, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mMaxThroughputRateTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mMaxThroughputRateTextField);
 
     }
 
