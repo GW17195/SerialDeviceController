@@ -14,7 +14,6 @@ public class HomeFrame extends JFrame {
     private JLabel mMotorLabel = new JLabel("电机");
 
 
-
     ///////
     private JLabel mReductionRateLabel = new JLabel("减速比");
     private JTextArea mReductionRateTextArea = new JTextArea();
@@ -30,9 +29,19 @@ public class HomeFrame extends JFrame {
     ///////
     private  JLabel mClientName = new JLabel("客户略称");
 
+    private  JLabel mLiquidName = new JLabel("液体名称");
 
+    private  JTextArea mLiquidNameTextArea = new JTextArea();
 
+    private  JLabel mLiquidRate = new JLabel("液体比重");
 
+    private  JTextArea mLiquidRateTextArea = new JTextArea();
+
+    private  JLabel mLiquidViscosity = new JLabel("液体粘度");
+
+    private  JTextArea mLiquidViscosityTextArea = new JTextArea();
+
+    private  JLabel mLiquidViscosityUnit = new JLabel("cP(Mpa.s)");
 
 
     private JPanel mHomePanel = new JPanel();
@@ -73,7 +82,7 @@ public class HomeFrame extends JFrame {
      * 初始化控件
      */
     private void initComponents() {
-        mHomePanel.setBorder(BorderFactory.createTitledBorder("H"));
+        mHomePanel.setBorder(BorderFactory.createTitledBorder("v0"));
         mHomePanel.setBounds(0, 0, UIConfig.WINDOW_WIDTH, UIConfig.WINDOW_HEIGHT);
         mHomePanel.setLayout(null);
         add(mHomePanel);
@@ -87,7 +96,7 @@ public class HomeFrame extends JFrame {
                 UIConfig.CHINESE_CHARACTER_WIDTH*4,
                 UIConfig.CHINESE_CHARACTER_WIDTH);
         mTestDataLabel.setFont(UIConfig.TEXT_FONT);
-       // mTestDataLabel.setBackground(Color.lightGray);
+        mTestDataLabel.setBackground(Color.lightGray);
         mTestDataLabel.setOpaque(true);
         mHomePanel.add(mTestDataLabel);
 
@@ -173,6 +182,73 @@ public class HomeFrame extends JFrame {
         //mClientName.setBackground(Color.lightGray);
         mClientName.setOpaque(true);
         mHomePanel.add(mClientName);
+        ///////////////////////////////////////////////
+        //第一行第二个组件
+        mLiquidName.setForeground(Color.BLACK);
+        mLiquidName.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
+                30, UIConfig.CHINESE_CHARACTER_WIDTH*4,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mLiquidName.setFont(UIConfig.TEXT_FONT);
+        //mClientName.setBackground(Color.lightGray);
+        mLiquidName.setOpaque(true);
+        mHomePanel.add(mLiquidName);
+
+
+        mLiquidNameTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+                25, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mLiquidNameTextArea.setLineWrap(true);
+        mLiquidNameTextArea.setWrapStyleWord(true);
+        mLiquidNameTextArea.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidNameTextArea);
+
+        //第二行第二个组件
+        mLiquidRate.setForeground(Color.BLACK);
+        mLiquidRate.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*3, UIConfig.CHINESE_CHARACTER_WIDTH*4,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mLiquidRate.setFont(UIConfig.TEXT_FONT);
+        //mClientName.setBackground(Color.lightGray);
+        mLiquidRate.setOpaque(true);
+        mHomePanel.add(mLiquidRate);
+
+        mLiquidRateTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*3, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mLiquidRateTextArea.setLineWrap(true);
+        mLiquidRateTextArea.setWrapStyleWord(true);
+        mLiquidRateTextArea.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidRateTextArea);
+        //第三行第二个组件
+        mLiquidViscosity.setForeground(Color.BLACK);
+        mLiquidViscosity.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*4,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        mLiquidViscosity.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosity.setBackground(Color.RED);
+        mLiquidViscosity.setOpaque(true);
+        mHomePanel.add(mLiquidViscosity);
+
+
+        mLiquidViscosityTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mLiquidViscosityTextArea.setLineWrap(true);
+        mLiquidViscosityTextArea.setWrapStyleWord(true);
+        mLiquidViscosityTextArea.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidViscosityTextArea);
+
+
+
+        mLiquidViscosityUnit.setForeground(Color.BLACK);
+        mLiquidViscosityUnit.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*33+5 ,
+                30+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*3+5,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+        //mLiquidViscosityUnit.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosityUnit.setBackground(Color.RED);
+        mLiquidViscosityUnit.setOpaque(true);
+        mHomePanel.add(mLiquidViscosityUnit);
+
 
 
     }
