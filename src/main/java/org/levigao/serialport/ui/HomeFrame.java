@@ -5,7 +5,6 @@ import org.levigao.serialport.data.UIConfig;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Line2D;
 
 public class HomeFrame extends JFrame {
     ///////
@@ -62,7 +61,7 @@ public class HomeFrame extends JFrame {
 
     private  JLabel mThroughputRatePerTurnUnit = new JLabel("ml/rev");
 
-    private JPanel mHomePanel = new JPanel();
+    private JPanel mHomePanel = new DrawLineJPanel();
 
     // Create the JDatePicker
 
