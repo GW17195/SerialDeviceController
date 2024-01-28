@@ -154,8 +154,9 @@ public class JDatePicker extends JComponent implements DatePicker {
         layout.putConstraint(SpringLayout.SOUTH, this, 0, SpringLayout.SOUTH, button);
 
         //Do layout formatting
+        datePanel.setPreferredSize(new Dimension(400,180));
         int h = (int) button.getPreferredSize().getHeight();
-        int w = (int) datePanel.getPreferredSize().getWidth();
+        int w = (int) datePanel.getPreferredSize().getWidth()/2;
         button.setPreferredSize(new Dimension(h, h));
         formattedTextField.setPreferredSize(new Dimension(w - h - 1, h));
 
