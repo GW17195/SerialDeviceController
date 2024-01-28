@@ -16,7 +16,7 @@ public class HomeFrame extends JFrame {
 
     ///////
     private JLabel mReductionRateLabel = new JLabel("减速比");
-    private JTextArea mReductionRateTextArea = new JTextArea();
+    private JTextField mReductionRateTextField = new JTextField();
 
     ///////
     private JLabel mScaleLabel = new JLabel("天平");
@@ -31,15 +31,15 @@ public class HomeFrame extends JFrame {
 
     private  JLabel mLiquidName = new JLabel("液体名称");
 
-    private  JTextArea mLiquidNameTextArea = new JTextArea();
+    private  JTextField mLiquidNameTextField = new JTextField();
 
     private  JLabel mLiquidRate = new JLabel("液体比重");
 
-    private  JTextArea mLiquidRateTextArea = new JTextArea();
+    private  JTextField mLiquidRateTextField = new JTextField();
 
     private  JLabel mLiquidViscosity = new JLabel("液体粘度");
 
-    private  JTextArea mLiquidViscosityTextArea = new JTextArea();
+    private  JTextField mLiquidViscosityTextField = new JTextField();
 
     private  JLabel mLiquidViscosityUnit = new JLabel("cP(Mpa.s)");
 
@@ -134,14 +134,12 @@ public class HomeFrame extends JFrame {
         mHomePanel.add(mReductionRateLabel);
 
 
-        mReductionRateTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*5,
+        mReductionRateTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*5,
                 25+UIConfig.CHINESE_CHARACTER_WIDTH*6,
                 UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
-        mReductionRateTextArea.setLineWrap(true);
-        mReductionRateTextArea.setWrapStyleWord(true);
-        mReductionRateTextArea.setFont(UIConfig.TEXT_FONT);
-        mHomePanel.add(mReductionRateTextArea);
+        mReductionRateTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mReductionRateTextField);
 
         //第四行第一个组件
         mScaleLabel.setForeground(Color.BLACK);
@@ -194,13 +192,11 @@ public class HomeFrame extends JFrame {
         mHomePanel.add(mLiquidName);
 
 
-        mLiquidNameTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+        mLiquidNameTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
                 25, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
-        mLiquidNameTextArea.setLineWrap(true);
-        mLiquidNameTextArea.setWrapStyleWord(true);
-        mLiquidNameTextArea.setFont(UIConfig.TEXT_FONT);
-        mHomePanel.add(mLiquidNameTextArea);
+        mLiquidNameTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidNameTextField);
 
         //第二行第二个组件
         mLiquidRate.setForeground(Color.BLACK);
@@ -212,13 +208,11 @@ public class HomeFrame extends JFrame {
         mLiquidRate.setOpaque(true);
         mHomePanel.add(mLiquidRate);
 
-        mLiquidRateTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+        mLiquidRateTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
                 25+UIConfig.CHINESE_CHARACTER_WIDTH*3, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
-        mLiquidRateTextArea.setLineWrap(true);
-        mLiquidRateTextArea.setWrapStyleWord(true);
-        mLiquidRateTextArea.setFont(UIConfig.TEXT_FONT);
-        mHomePanel.add(mLiquidRateTextArea);
+        mLiquidRateTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidRateTextField);
         //第三行第二个组件
         mLiquidViscosity.setForeground(Color.BLACK);
         mLiquidViscosity.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*18 ,
@@ -230,13 +224,13 @@ public class HomeFrame extends JFrame {
         mHomePanel.add(mLiquidViscosity);
 
 
-        mLiquidViscosityTextArea.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
+        mLiquidViscosityTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*23,
                 25+UIConfig.CHINESE_CHARACTER_WIDTH*6, UIConfig.CHINESE_CHARACTER_WIDTH*10,
                 UIConfig.CHINESE_CHARACTER_WIDTH+10);
-        mLiquidViscosityTextArea.setLineWrap(true);
-        mLiquidViscosityTextArea.setWrapStyleWord(true);
-        mLiquidViscosityTextArea.setFont(UIConfig.TEXT_FONT);
-        mHomePanel.add(mLiquidViscosityTextArea);
+
+
+        mLiquidViscosityTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mLiquidViscosityTextField);
 
 
 

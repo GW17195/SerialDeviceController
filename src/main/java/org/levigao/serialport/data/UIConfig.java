@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class UIConfig {
     // 程序界面宽度
-    public static final int WINDOW_WIDTH = 550*2;
+    public static final int WINDOW_WIDTH = 700*2;
     // 程序界面高度
     public static final int WINDOW_HEIGHT = 450;
     //UI界面左上角标题
