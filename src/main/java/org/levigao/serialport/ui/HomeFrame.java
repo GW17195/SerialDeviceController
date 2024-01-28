@@ -168,7 +168,7 @@ public class HomeFrame extends JFrame {
         mScaleLabel.setOpaque(true);
         mHomePanel.add(mScaleLabel);
 
-        //第五章第一个组件
+        //第五行第一个组件
         mPumpTypeLabel.setForeground(Color.BLACK);
         mPumpTypeLabel.setBounds(20, 30+UIConfig.CHINESE_CHARACTER_WIDTH*12,
                 UIConfig.CHINESE_CHARACTER_WIDTH*4,
