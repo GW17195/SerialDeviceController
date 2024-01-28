@@ -70,7 +70,9 @@ public class HomeFrame extends JFrame {
 
     private  JLabel mThroughputRatePerTurnUnit = new JLabel("ml/rev");
 
-    private  JLabel mPumpSpeed = new JLabel("泵转速");
+    private  JLabel mPumpSpeed = new JLabel("泵的转速");
+
+    private  JTextField mPumpSpeedTextField = new JTextField();
 
     private JPanel mHomePanel = new DrawLineJPanel();
 
@@ -378,6 +380,24 @@ public class HomeFrame extends JFrame {
         mThroughputRatePerTurnUnit.setOpaque(true);
         mHomePanel.add(mThroughputRatePerTurnUnit);
 
+        //第一行第三个控件
+
+        mPumpSpeed.setForeground(Color.BLACK);
+        mPumpSpeed.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*42 ,
+                30, UIConfig.CHINESE_CHARACTER_WIDTH*5,
+                UIConfig.CHINESE_CHARACTER_WIDTH);
+
+        mPumpSpeed.setFont(UIConfig.TEXT_FONT);
+        //mLiquidViscosity.setBackground(Color.RED);
+        mPumpSpeed.setOpaque(true);
+        mHomePanel.add(mPumpSpeed);
+
+
+        mPumpSpeedTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*47,
+                25, UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mPumpSpeedTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mPumpSpeedTextField);
     }
 
     /**
