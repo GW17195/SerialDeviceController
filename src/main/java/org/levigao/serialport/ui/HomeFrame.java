@@ -31,8 +31,12 @@ public class HomeFrame extends JFrame {
 
     ///////
     private JLabel mProductNo = new JLabel("产品编号");
+
+    private  JTextField mProductNoTextField = new JTextField();
     ///////
     private  JLabel mClientName = new JLabel("客户略称");
+
+    private  JTextField mClientNameTextField = new JTextField();
 
     private  JLabel mLiquidName = new JLabel("液体名称");
 
@@ -206,6 +210,14 @@ public class HomeFrame extends JFrame {
         mProductNo.setOpaque(true);
         mHomePanel.add(mProductNo);
 
+
+        mProductNoTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*5,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*15,
+                UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mProductNoTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mProductNoTextField);
+
         //第七行第一个组件
         mClientName.setForeground(Color.BLACK);
         mClientName.setBounds(20, 30+UIConfig.CHINESE_CHARACTER_WIDTH*18,
@@ -215,6 +227,14 @@ public class HomeFrame extends JFrame {
         //mClientName.setBackground(Color.lightGray);
         mClientName.setOpaque(true);
         mHomePanel.add(mClientName);
+
+
+        mClientNameTextField.setBounds(20+UIConfig.CHINESE_CHARACTER_WIDTH*5,
+                25+UIConfig.CHINESE_CHARACTER_WIDTH*18,
+                UIConfig.CHINESE_CHARACTER_WIDTH*10,
+                UIConfig.CHINESE_CHARACTER_WIDTH+10);
+        mClientNameTextField.setFont(UIConfig.TEXT_FONT);
+        mHomePanel.add(mClientNameTextField);
         ///////////////////////////////////////////////
         //第一行第二个组件
         mLiquidName.setForeground(Color.BLACK);
