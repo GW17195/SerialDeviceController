@@ -1,10 +1,15 @@
 package org.levigao.serialport.ui;
 
+import org.jdatepicker.ComponentIconDefaults;
 import org.jdatepicker.JDatePicker;
 import org.levigao.serialport.data.UIConfig;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class HomeFrame extends JFrame {
     ///////
@@ -61,6 +66,8 @@ public class HomeFrame extends JFrame {
 
     private  JLabel mThroughputRatePerTurnUnit = new JLabel("ml/rev");
 
+    private  JLabel mPumpSpeed = new JLabel("泵转速");
+
     private JPanel mHomePanel = new DrawLineJPanel();
 
     // Create the JDatePicker
@@ -68,7 +75,18 @@ public class HomeFrame extends JFrame {
     public static void main(String args[]) {
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				new HomeFrame().setVisible(true);
+                HomeFrame hf = new HomeFrame();
+                InputStream stream = ComponentIconDefaults.class.getResourceAsStream(UIConfig.IconImagePath);
+                BufferedImage image = null;
+                try {
+                    image = ImageIO.read(stream);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                hf.setIconImage(image);
+                hf.setVisible(true);
+				//new HomeFrame().setVisible(true);
 			}
 		});
 	}
@@ -113,7 +131,7 @@ public class HomeFrame extends JFrame {
                 UIConfig.CHINESE_CHARACTER_WIDTH*4,
                 UIConfig.CHINESE_CHARACTER_WIDTH);
         mTestDataLabel.setFont(UIConfig.TEXT_FONT);
-        mTestDataLabel.setBackground(Color.lightGray);
+        //mTestDataLabel.setBackground(Color.lightGray);
         mTestDataLabel.setOpaque(true);
         mHomePanel.add(mTestDataLabel);
 

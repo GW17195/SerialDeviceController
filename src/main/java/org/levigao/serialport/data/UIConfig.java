@@ -13,4 +13,6 @@ public class UIConfig {
     public static final Font TEXT_FONT = new Font("微软雅黑", Font.BOLD, 18);
 
     public static final int CHINESE_CHARACTER_WIDTH = 18;
+
+    public static final String IconImagePath = "/org/jdatepicker/icons/blackdot.png";
 }
