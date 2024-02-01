@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class HomeFrame extends JFrame {
+public class HomePage {
     ///////
     private JLabel mTestDataLabel = new JLabel("测试日期");
     final private JDatePicker mDatePicker = new JDatePicker();
@@ -80,46 +80,17 @@ public class HomeFrame extends JFrame {
 
     // Create the JDatePicker
 
-    public static void main(String args[]) {
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-                HomeFrame hf = new HomeFrame();
-                InputStream stream = ComponentIconDefaults.class.getResourceAsStream(UIConfig.IconImagePath);
-                BufferedImage image = null;
-                try {
-                    image = ImageIO.read(stream);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
 
-                hf.setIconImage(image);
-                hf.setVisible(true);
-				//new HomeFrame().setVisible(true);
-			}
-		});
-	}
-    public HomeFrame() {
-        initView();
+    public HomePage() {
         initComponents();
         actionListener();
         initData();
     }
 
-    /**
-     * 初始化窗口
-     */
-    private void initView() {
-        // 关闭程序
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        // 禁止窗口最大化
-        setResizable(false);
-        // 设置程序窗口居中显示
-        Point p = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
-        setBounds(p.x - UIConfig.WINDOW_WIDTH / 2, p.y - UIConfig.WINDOW_HEIGHT / 2,
-                UIConfig.WINDOW_WIDTH, UIConfig.WINDOW_HEIGHT);
-        this.setLayout(null);
-        setTitle(UIConfig.UITitle);
+    public JPanel getHomePanel(){
+        return mHomePanel;
     }
+
 
     /**
      * 初始化控件
@@ -128,7 +99,6 @@ public class HomeFrame extends JFrame {
         mHomePanel.setBorder(BorderFactory.createTitledBorder("v0"));
         mHomePanel.setBounds(0, 0, UIConfig.WINDOW_WIDTH, UIConfig.WINDOW_HEIGHT);
         mHomePanel.setLayout(null);
-        add(mHomePanel);
 
         ///////////////Home页面布局///////////////////////////
         //第一行第一个组件
